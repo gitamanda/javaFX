@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultantscheduler.FXMLHomepageController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="601.0" style="-fx-border-color: maroon; -fx-border-style: solid; -fx-border-width: 10px;">
+         <children>
+            <Label layoutX="187.0" layoutY="43.0" text="Consultant Home" underline="true">
+               <font>
+                  <Font name="Georgia Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="96.0" text="Welcome! Please choose an option.">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Hyperlink fx:id="hlViewCalendar" layoutX="243.0" layoutY="273.0" onAction="#goToCalendar" text="View Calendar">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="hlNewCust" layoutX="217.0" layoutY="184.0" onAction="#goToNewCust" text="Create New Customer">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="hlReportsMenu" layoutX="244.0" layoutY="302.0" onAction="#goToReports" text="Reports Menu">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="hlMaintainCust" layoutX="183.0" layoutY="215.0" onAction="#goToMaintainCust" text="Look Up/Edit/Delete Customer">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="hlNewAppt" layoutX="205.0" layoutY="244.0" onAction="#goToNewAppt" text="Create New Appointment">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="btnExit" layoutX="237.0" layoutY="422.0" mnemonicParsing="false" onAction="#btnExitOnClick" text="Exit Application">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

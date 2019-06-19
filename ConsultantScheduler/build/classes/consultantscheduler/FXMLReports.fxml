@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultantscheduler.FXMLReportsController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="519.0" prefWidth="611.0" style="-fx-border-color: maroon; -fx-border-style: solid; -fx-border-width: 10px;">
+         <children>
+            <Label layoutX="249.0" layoutY="29.0" text="Reports" underline="true">
+               <font>
+                  <Font name="Georgia Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="161.0" layoutY="83.0" text="Welcome! Please choose an option.">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbvSchedule" layoutX="36.0" layoutY="225.0" prefHeight="235.0" prefWidth="535.0" visible="false">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Date">
+                  <cellValueFactory>
+                        <PropertyValueFactory property="apptDate" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Start Time">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="startTime" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="End Time">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="endTime" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Customer Name">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="custName" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Phone">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Location">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="location" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="67.0" text="Title">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="title" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="67.0" text="Contact">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="contact" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="67.0" text="URL">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="url" />
+                      </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="97.0" text="Description">
+                      <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                      </cellValueFactory>
+                  </TableColumn>
+                
+              </columns>
+            </TableView>
+            <Hyperlink fx:id="hlSchedule" layoutX="194.0" layoutY="112.0" onAction="#generateScheduleReport" text="Schedule - Ordered by Consultant">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Button fx:id="btnExitToMainMenu" layoutX="434.0" layoutY="472.0" mnemonicParsing="false" onAction="#returnToMainScreen" text="Exit to Main Menu">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tbvCustomers" layoutX="35.0" layoutY="226.0" prefHeight="235.0" prefWidth="535.0" visible="false">
+               <columns>
+                <TableColumn prefWidth="195.0" text="Customer Name">
+                <cellValueFactory>
+                        <PropertyValueFactory property="custName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn minWidth="2.0" prefWidth="208.0" text="Phone">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phone" />                            
+                    </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+            <ComboBox fx:id="cbLocation" layoutX="275.0" layoutY="198.0" onAction="#generateScheduleByLocation" prefWidth="150.0" visible="false" />
+            <Label fx:id="lblSelect" layoutX="166.0" layoutY="205.0" text="Select Location:" visible="false">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Hyperlink fx:id="hlCustomers" layoutX="228.0" layoutY="138.0" onAction="#generateCustomersReport" text="Customer Phone List">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="hlApptsByLocation" layoutX="215.0" layoutY="165.0" onAction="#enableHiddenControls" text="Appointments by Location">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

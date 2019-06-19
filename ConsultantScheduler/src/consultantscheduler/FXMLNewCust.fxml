@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultantscheduler.FXMLNewCustController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="602.0" style="-fx-border-color: maroon; -fx-border-style: solid; -fx-border-width: 10px;">
+         <children>
+            <Label layoutX="160.0" layoutY="46.0" text="Create New Customer" underline="true">
+               <font>
+                  <Font name="Georgia Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="195.0" layoutY="140.0" text="First Name:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="174.0" layoutY="213.0" text="Street Address:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="240.0" layoutY="289.0" text="City:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="172.0" layoutY="249.0" text="Address Line 2:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="198.0" layoutY="178.0" text="Last Name:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="243.0" layoutY="330.0" text="Zip:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFName" layoutX="279.0" layoutY="132.0" />
+            <TextField fx:id="txtLName" layoutX="279.0" layoutY="170.0" />
+            <TextField fx:id="txtAddress1" layoutX="279.0" layoutY="206.0" />
+            <TextField fx:id="txtAddress2" layoutX="279.0" layoutY="243.0" />
+            <TextField fx:id="txtCity" layoutX="279.0" layoutY="283.0" />
+            <TextField fx:id="txtZip" layoutX="279.0" layoutY="323.0" />
+            <TextField fx:id="txtCountry" layoutX="279.0" layoutY="357.0" />
+            <TextField fx:id="txtPhone" layoutX="279.0" layoutY="392.0" />
+            <Button fx:id="btnSave" layoutX="383.0" layoutY="438.0" mnemonicParsing="false" onAction="#btnSaveOnClick" text="Save">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancel" layoutX="168.0" layoutY="438.0" mnemonicParsing="false" onAction="#btnCancelOnClick" text="Cancel">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="214.0" layoutY="364.0" text="Country:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="226.0" layoutY="399.0" text="Phone:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

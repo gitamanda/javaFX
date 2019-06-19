@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultantscheduler.FXMLApptMaintenanceController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="614.0" prefWidth="610.0" style="-fx-border-color: maroon; -fx-border-style: solid; -fx-border-width: 10px;">
+         <children>
+            <TextField fx:id="txtCustName" layoutX="278.0" layoutY="122.0" />
+            <TextField fx:id="txtApptTitle" layoutX="278.0" layoutY="159.0" />
+            <TextField fx:id="txtContact" layoutX="277.0" layoutY="312.0" />
+            <TextArea fx:id="taDescription" layoutX="278.0" layoutY="418.0" prefHeight="85.0" prefWidth="149.0" />
+            <Label layoutX="197.0" layoutY="47.0" text="Edit Appointment" underline="true">
+               <font>
+                  <Font name="Georgia Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancel" layoutX="187.0" layoutY="530.0" mnemonicParsing="false" onAction="#btnCancelOnClick" text="Cancel Editing">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSave" layoutX="385.0" layoutY="530.0" mnemonicParsing="false" onAction="#btnSaveOnClick" text="Save">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="204.0" layoutY="129.0" text="Customer:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="148.0" layoutY="224.0" text="Appointment Date:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="206.0" layoutY="389.0" text="Location: ">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="146.0" layoutY="282.0" text="Appointment Time:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="319.0" text="Contact:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="166.0" text="Appointment Title:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpApptDate" layoutX="278.0" layoutY="218.0" prefHeight="25.0" prefWidth="149.0" />
+            <ComboBox fx:id="cbApptTime" layoutX="278.0" layoutY="276.0" onMouseClicked="#loadTimeBoxes" prefWidth="150.0" />
+            <ComboBox fx:id="cbLocation" layoutX="277.0" layoutY="383.0" prefWidth="150.0" />
+            <Label fx:id="lblCurrTime" layoutX="147.0" layoutY="252.0" text="Current appointment time:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="234.0" layoutY="354.0" text="URL:">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUrl" layoutX="277.0" layoutY="347.0" />
+      <Label layoutX="187.0" layoutY="422.0" text="Description: ">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCurrDate" layoutX="148.0" layoutY="194.0" text="Current appointment date:">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

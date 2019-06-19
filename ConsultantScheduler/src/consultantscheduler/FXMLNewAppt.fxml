@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultantscheduler.FXMLNewApptController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane id="AnchorPane" layoutX="-1.0" prefHeight="677.0" prefWidth="610.0" style="-fx-border-color: maroon; -fx-border-style: solid; -fx-border-width: 10px;">
+               <children>
+                  <Label layoutX="190.0" layoutY="26.0" text="Create Appointment" underline="true">
+                     <font>
+                        <Font name="Georgia Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnCancel" layoutX="187.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnCancelOnClick" text="Cancel">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnSave" disable="true" layoutX="386.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnSaveOnClick" text="Save">
+                     <font>
+                        <Font name="Georgia" size="16.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="148.0" layoutY="357.0" text="Appointment Date:">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="206.0" layoutY="498.0" text="Location: ">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="392.0" text="Appointment Time:">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dpApptDate" disable="true" layoutX="277.0" layoutY="350.0" onAction="#loadTimeBoxes" />
+                  <ComboBox fx:id="cbLocation" disable="true" layoutX="278.0" layoutY="491.0" prefWidth="150.0" />
+                  <Label layoutX="214.0" layoutY="428.0" text="Contact:">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtContact" disable="true" layoutX="277.0" layoutY="421.0" />
+                  <Label layoutX="150.0" layoutY="322.0" text="Appointment Title:">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtApptTitle" disable="true" layoutX="278.0" layoutY="315.0" />
+                  <TextArea fx:id="taDescription" disable="true" layoutX="277.0" layoutY="527.0" prefHeight="62.0" prefWidth="174.0" />
+                  <TableView fx:id="tbvCustomers" layoutX="138.0" layoutY="118.0" prefHeight="101.0" prefWidth="355.0">
+                     <columns>
+                        <TableColumn minWidth="0.0" prefWidth="223.0" text="Customer Name">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="custName" />
+                           </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn minWidth="2.0" prefWidth="131.0" text="Phone">
+                           <cellValueFactory>
+                              <PropertyValueFactory property="phone" />
+                           </cellValueFactory>
+                        </TableColumn>
+                     </columns>
+                  </TableView>
+                  <Label layoutX="186.0" layoutY="537.0" text="Description: ">
+                     <font>
+                        <Font name="Georgia" size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbStartTime" disable="true" layoutX="278.0" layoutY="385.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="234.0" layoutY="463.0" text="URL:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUrl" disable="true" layoutX="277.0" layoutY="456.0" />
+            <Label layoutX="163.0" layoutY="287.0" text="Customer Name:">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCustName" disable="true" layoutX="278.0" layoutY="280.0" />
+            <Button fx:id="btnSearch" layoutX="383.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnSearchOnClick" text="Search Customers">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtSearchText" layoutX="146.0" layoutY="72.0" prefHeight="25.0" prefWidth="212.0" promptText="First Name, Last Name, or Phone #" />
+            <Button fx:id="btnSelectCustomer" layoutX="206.0" layoutY="235.0" mnemonicParsing="false" onAction="#setCustNameTxtFld" text="Schedule Selected Customer">
+               <font>
+                  <Font name="Georgia" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="320" style="-fx-border-color: maroon; -fx-border-style: solid; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="consultantscheduler.FXMLDocumentController">
+    <children>
+        <Button fx:id="btnLogin" layoutX="122.0" layoutY="345.0" onAction="#handleButtonAction" text="Login">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="20.0" layoutY="29.0" text="Consultant Scheduler" underline="true">
+         <font>
+            <Font name="Georgia Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUname" layoutX="18.0" layoutY="120.0" text="Username: ">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPword" layoutX="18.0" layoutY="176.0" text="Password: ">
+         <font>
+            <Font name="Georgia Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="141.0" layoutY="116.0" />
+      <PasswordField fx:id="txtPassword" layoutX="141.0" layoutY="174.0" />
+    </children>
+</AnchorPane>
